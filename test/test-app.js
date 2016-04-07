@@ -18,7 +18,8 @@ describe('redux:app', function () {
       'bower.json',
       'package.json',
       '.editorconfig',
-      'index.html'
+      'index.html',
+      '__test__/Home-test.js'
     ]);
   });
 
@@ -33,4 +34,12 @@ describe('redux:app', function () {
     assert.fileContent(store, "persistState(window.location.href.match(/[?&]debug_session=([^&]+)\\b/))");
     assert.fileContent(store, ")(createStore);");
   });
+
+  it('add jest dependencies and configs', function() {
+    var packageFile = './package.json';
+    assert.file(packageFile);
+    assert.fileContent(packageFile, 'jest-cli');
+    assert.fileContent(packageFile, 'babel-jest');
+    assert.fileContent(packageFile, '"jest": {"unmockedModulePathPatterns": ["/node_modules/react","/node_modules/react-dom","/node_modules/react-addons-test-utils"]}');
+  })
 });
