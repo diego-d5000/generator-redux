@@ -80,7 +80,7 @@ function getPackageVersions(prop, packages) {
 function copy(src, dest) {
   this.fs.copyTpl(this.templatePath(src), this.destinationPath(dest), this.props);
 }
-pp;
+
 exports['default'] = _yeomanGenerator.Base.extend({
   initializing: function initializing() {
     this.copy = copy.bind(this);
@@ -138,7 +138,7 @@ exports['default'] = _yeomanGenerator.Base.extend({
     },
 
     devDeps: function devDeps() {
-      this.getPackageVersions('devDeps', [['babel-core', '6.3.15'], ['babel-eslint', '5.0.0-beta4'], ['babel-jest', '^9.0.0'], ['babel-loader', '6.2.0'], ['babel-preset-es2015', '6.3.13'], ['babel-preset-react', '6.3.13'], ['babel-preset-react-hmre', '1.0.0'], ['babel-preset-stage-0', '6.3.13'], ['cross-env', '1.0.6'], 'css-loader', 'cssnext-loader', ['eslint', '1.10.3'], ['eslint-plugin-babel', '3.0.0'], ['eslint-plugin-react', '3.11.3'], ['eventsource-polyfill', '0.9.6'], 'express', 'extract-text-webpack-plugin', 'jest', 'jest-cli', 'path', ['react-addons-test-utils', '~0.14.0'], 'style-loader', ['webpack', '1.0.0'], 'webpack-dev-middleware', 'webpack-hot-middleware']);
+      this.getPackageVersions('devDeps', [['babel-core', '6.3.15'], ['babel-eslint', '5.0.0-beta4'], ['babel-jest', '9.0.0'], ['babel-loader', '6.2.0'], ['babel-preset-es2015', '6.3.13'], ['babel-preset-react', '6.3.13'], ['babel-preset-react-hmre', '1.0.0'], ['babel-preset-stage-0', '6.3.13'], ['cross-env', '1.0.6'], 'css-loader', 'cssnext-loader', ['eslint', '1.10.3'], ['eslint-plugin-babel', '3.0.0'], ['eslint-plugin-react', '3.11.3'], ['eventsource-polyfill', '0.9.6'], 'express', 'extract-text-webpack-plugin', 'jest', 'jest-cli', 'path', ['react-addons-test-utils', '0.14.0'], 'style-loader', ['webpack', '1.0.0'], 'webpack-dev-middleware', 'webpack-hot-middleware']);
     }
   },
 
@@ -156,7 +156,7 @@ exports['default'] = _yeomanGenerator.Base.extend({
       this.copy('server.js', 'server.js');
       this.copy('index.html', 'index.html');
       this.copy('js/index.js', 'js/index.js');
-      this.directory('__test__', '__test__');
+      this.directory('__tests__', '__tests__');
       this.directory('css', 'css');
       this.directory('js/actions', 'js/actions');
       this.directory('js/components', 'js/components');

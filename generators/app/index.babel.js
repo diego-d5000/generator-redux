@@ -43,7 +43,7 @@ function copy(src, dest) {
     this.props
   );
 }
-pp
+
 export default Base.extend({
   initializing() {
     this.copy = copy.bind(this);
@@ -129,7 +129,7 @@ export default Base.extend({
         [
           ['babel-core', '6.3.15'],
           ['babel-eslint', '5.0.0-beta4'],
-          ['babel-jest', '^9.0.0'],
+          ['babel-jest', '9.0.0'],
           ['babel-loader', '6.2.0'],
           ['babel-preset-es2015', '6.3.13'],
           ['babel-preset-react', '6.3.13'],
@@ -147,7 +147,7 @@ export default Base.extend({
           'jest',
           'jest-cli',
           'path',
-          ['react-addons-test-utils', '~0.14.0'],
+          ['react-addons-test-utils', '0.14.0'],
           'style-loader',
           ['webpack', '1.0.0'],
           'webpack-dev-middleware',
@@ -171,7 +171,7 @@ export default Base.extend({
       this.copy('server.js', 'server.js');
       this.copy('index.html', 'index.html');
       this.copy('js/index.js', 'js/index.js');
-      this.directory('__test__', '__test__')
+      this.directory('__tests__', '__tests__');
       this.directory('css', 'css');
       this.directory('js/actions', 'js/actions');
       this.directory('js/components', 'js/components');

@@ -1,12 +1,12 @@
 'use strict';
 
-jest.unmock('../components/Home');
+jest.unmock('../js/components/Home');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import Home from '../components/Home';
-import configureStore from '../store/configureStore';
+import Home from '../js/components/Home';
+import configureStore from '../js/store/configureStore';
 
 describe('Home component', () => {
 

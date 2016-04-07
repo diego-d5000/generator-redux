@@ -19,7 +19,7 @@ describe('redux:app', function () {
       'package.json',
       '.editorconfig',
       'index.html',
-      '__test__/Home-test.js'
+      '__tests__/Home-test.js'
     ]);
   });
 
@@ -40,6 +40,6 @@ describe('redux:app', function () {
     assert.file(packageFile);
     assert.fileContent(packageFile, 'jest-cli');
     assert.fileContent(packageFile, 'babel-jest');
-    assert.fileContent(packageFile, '"jest": {"unmockedModulePathPatterns": ["/node_modules/react","/node_modules/react-dom","/node_modules/react-addons-test-utils"]}');
+    assert.fileContent(packageFile, 'unmockedModulePathPatterns');
   })
 });
